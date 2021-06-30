@@ -204,7 +204,7 @@ pre code {
 <li><a href="#des-choix-plus-fréquemment-à-la-recherche-de-consensus-et-de-neutralité-que-de-mobilisation-identitaire-problématiques-1c-2a-2b-2c-2d-2e">4 Des choix plus fréquemment à la recherche de consensus et de neutralité que de mobilisation identitaire (problématiques 1c, 2a, 2b, 2c, 2d, 2e)</a></li>
 <li><a href="#conclusion-problématique-4">Conclusion (problématique 4)</a></li>
 <li><a href="#section">_________</a></li>
-<li><a href="#inutilisé-pour-linstant">-7 INUTILISÉ POUR L’INSTANT</a>
+<li><a href="#inutilisé-pour-linstant">7 INUTILISÉ POUR L’INSTANT</a>
 <ul>
 <li><a href="#néotoponymie-et-typologie">| 7.1 Néotoponymie et typologie</a></li>
 <li><a href="#étude-du-lien-entre-néotoponymie-et-zau">| 8.7 Étude du lien entre néotoponymie et ZAU</a>
@@ -225,10 +225,8 @@ pre code {
 </ul>
 </div>
 
-<p>Titres possibles :</p>
-<p>Les communes nouvelles françaises : une néotoponymie entre confirmations, juxtapositions et innovations</p>
-<p>La néotoponymie des communes nouvelles françaises : le nom comme outil géopolitique, entre dominations et neutralité</p>
-<p>De l’utilisation politique des toponymes : les communes nouvelles françaises entre héritages, géopolitique et recherche d’unité</p>
+<p>NB : Dans ce script, les données sont localisées dans un répertoire nommé <em>data</em>. À modifier en fonction de votre localisation des données (celles utilisées sont mises à disposition dans le cadre d’une démarche de science ouverte et reproductible). La construction de ces données sera précisée dans un <em>data paper</em> en cours de rédaction.</p>
+<p>Les données et le script sont accessibles à l’adresse suivante : <a href="https://nakala.fr/10.34847/nkl.b20d701l" class="uri">https://nakala.fr/10.34847/nkl.b20d701l</a>, une version html est plus aisément lisible à cette adresse : <a href="https://gbideau.github.io/CN_Fr_Neotopo/" class="uri">https://gbideau.github.io/CN_Fr_Neotopo/</a>.</p>
 <div id="introduction" class="section level1">
 <h1>Introduction</h1>
 <div id="code-import-des-données" class="section level6">
@@ -1736,6 +1734,105 @@ Commentaire GB : Il est possible de faire ce test pour à peu près n’importe 
 <p>Concernant la disparition de mots de patois, le cas de la Bretagne a été pointé dans certains articles de presse ou blogs régionaux (<span class="citation"><span>“Toponymie Bretonne. <span><span>Un</span></span> Trésor En Danger...<span></span>”</span> (2017)</span>, <span class="citation">Ayb (samedi 7 janvier 2017)</span>). Dans les faits, cette crainte, fondée principalement sur un cas (Brignogan-Plage et Plounéour-Trez ayant fusionné en Plounéour-Brignogan-plages, faisant disparaître la traduction bretonne de plage), ne paraît pas se retrouver dans de nombreuses autres situations. Certaines communes nouvelles viennent même s’inscrire en faux avec le choix d’une dénomination basée sur les langues régionales. On peut prendre pour exemple la commune de Maen-Roch (fusion de Saint-Brice-en-Coglès et Saint-Étienne-en-Coglès). Ce choix est intéressant à plus d’un titre : tout d’abord, car il s’est fait en plusieurs étapes avec la possibilité pour les habitants de proposer des noms, puis une commission d’élus a sélectionné six noms, qui ont été d’abord soumis aux conseils municipaux, les trois noms ayant emporté le scrutin ont, enfin, été soumis pour consultation aux habitants (le nom arrivé en tête aux conseils municipaux a été le même chez les habitants). On retrouve donc les différentes étapes que nous évoquions plus haut. Ensuite, les trois choix proposés au final sont, de fait, tous à l’encontre des recommandations de la Commission Nationale de Toponymie à savoir : Hauts-de-Bretagne (Maen-Roch se situe proche de la Normandie, soit dans la région dite de “Haute Bretagne,” mais sans la dominer), Coglance (contraction de deux noms de rivières, Coglès et Loisance, ce nom n’a donc pas de signification propre) et Maen-Roch, qui est bien dans la logique descriptive mais sans historicité et avec une pointe de redondance puisque Maen signifie “pierre” en breton et Roch signifie “roche” en gallo (langue romane présente dans la moitié ouest de la Bretagne).</p>
 <p>Ainsi, au vu des données concernant les communes nouvelles en Bretagne, il paraît abusif de considérer que ce mouvement aurait une tendance profonde à faire disparaître les toponymes bretons.</p>
 <p>Dans d’autres contextes également, les langues régionales ont été utilisées pour décrire les paysages. Par exemple, en Lozère, la commune de Cans et Cévennes a bâti son nom à partir de la référence à la région et au terme “cans” signifiant “petite montagne” ou encore la commune de Illtal (Haut-Rhin), construite à partir du nom d’un cours d’eau et de “tal” signifiant “vallée” en alémanique.</p>
+On peut ici comparer la longueur moyenne du nom des communes avant puis après la fusion. Utilisation pour cela du package <em>stringr</em>.
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+Min.
+</th>
+<th style="text-align:right;">
+1st Qu.
+</th>
+<th style="text-align:right;">
+Median
+</th>
+<th style="text-align:right;">
+Mean
+</th>
+<th style="text-align:right;">
+3rd Qu.
+</th>
+<th style="text-align:right;">
+Max.
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Nom avant fusion (A)
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:right;">
+12.841081
+</td>
+<td style="text-align:right;">
+18
+</td>
+<td style="text-align:right;">
+44
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Nom après fusion (B)
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+16
+</td>
+<td style="text-align:right;">
+16.003576
+</td>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+40
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Différence (A-B)
+</td>
+<td style="text-align:right;">
+-30
+</td>
+<td style="text-align:right;">
+-2
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+3.162495
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+29
+</td>
+</tr>
+</tbody>
+</table>
+<p>Entre 2012 et 2021, on observe que si les noms ont en moyenne été allongés par le passage en commune nouvelle, ce n’est pas quelque chose de systématique ni qui aurait un impact très important lorsqu’il y en a un.</p>
 </div>
 <div id="conclusion-problématique-4" class="section level1">
 <h1>Conclusion (problématique 4)</h1>
@@ -1747,7 +1844,7 @@ Commentaire GB : Il est possible de faire ce test pour à peu près n’importe 
 <h1>_________</h1>
 </div>
 <div id="inutilisé-pour-linstant" class="section level1">
-<h1>-7 INUTILISÉ POUR L’INSTANT</h1>
+<h1>7 INUTILISÉ POUR L’INSTANT</h1>
 <div id="néotoponymie-et-typologie" class="section level2">
 <h2>| 7.1 Néotoponymie et typologie</h2>
 <p>Une typologie exploratoire des communes fusionnantes a été réalisée, aboutissant à cinq types, basés sur des critères socio-économiques (principalement classes d’âges, secteur d’emploi, taux de navetteurs). C’est celle-ci qui est utilisée ici.</p>
